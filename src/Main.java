@@ -1,15 +1,21 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-public class Main {
+public class Main{
+	
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		//test cases
-		Vector a = new Vector(10, 10);
-		Vector b = new Vector(25, 25);
-		System.out.println(Vector.lerp(a, b, 0.5f));
-
+		Main main = new Main();
+		main.init();
 	}
-
+	public void init(){
+		JFrame frame = new JFrame("Bezier");
+		BezierPanel bP = new BezierPanel();
+		frame.add(bP);
+		bP.setSize(500, 500);
+		frame.setSize(500, 500);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
 }
